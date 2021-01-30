@@ -9,6 +9,10 @@ body,
   font-family: "Public Sans", sans-serif;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 button {
   background-color: green;
   background: -webkit-gradient(linear, left top, right top, color-stop(18%, #31d35c), to(#2bb7da));
