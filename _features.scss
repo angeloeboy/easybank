@@ -6,6 +6,7 @@
 
     h1 {
       font-weight: 400;
+      color: hsl(233, 26%, 24%);
     }
 
     p {
@@ -14,17 +15,25 @@
       line-height: 150%;
     }
   }
-
   .features-containers {
-    width: 280px;
-    h2 {
-      font-weight: 300;
-      margin: 35px 0px;
-    }
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    // background-color: red;
+    .features {
+      margin: 0px 20px;
+      margin-top: 100px;
+      h2 {
+        font-weight: 300;
+        margin: 35px 0px 20px 0px;
+        color: hsl(233, 26%, 24%);
+      }
 
-    p {
-      color: hsl(233, 8%, 62%);
-      line-height: 150%;
+      p {
+        color: hsl(233, 8%, 62%);
+        line-height: 150%;
+        letter-spacing: 0px;
+      }
     }
   }
 }

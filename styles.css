@@ -9,10 +9,6 @@ body,
   font-family: "Public Sans", sans-serif;
 }
 
-body {
-  overflow-x: hidden;
-}
-
 button {
   background-color: green;
   background: -webkit-gradient(linear, left top, right top, color-stop(18%, #31d35c), to(#2bb7da));
@@ -267,6 +263,7 @@ nav .nav-button {
 
 .features-container .top-text h1 {
   font-weight: 400;
+  color: #2d314d;
 }
 
 .features-container .top-text p {
@@ -276,16 +273,31 @@ nav .nav-button {
 }
 
 .features-container .features-containers {
-  width: 280px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.features-container .features-containers h2 {
+.features-container .features-containers .features {
+  margin: 0px 20px;
+  margin-top: 100px;
+}
+
+.features-container .features-containers .features h2 {
   font-weight: 300;
-  margin: 35px 0px;
+  margin: 35px 0px 20px 0px;
+  color: #2d314d;
 }
 
-.features-container .features-containers p {
+.features-container .features-containers .features p {
   color: #9698a6;
   line-height: 150%;
+  letter-spacing: 0px;
 }
 /*# sourceMappingURL=styles.css.map */
