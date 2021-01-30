@@ -1,0 +1,30 @@
+.features-container {
+  background-color: hsl(0, 0%, 98%);
+  padding: 100px 10%;
+  .top-text {
+    width: 50%;
+
+    h1 {
+      font-weight: 400;
+    }
+
+    p {
+      margin-top: 20px;
+      color: hsl(233, 8%, 62%);
+      line-height: 150%;
+    }
+  }
+
+  .features-containers {
+    width: 280px;
+    h2 {
+      font-weight: 300;
+      margin: 35px 0px;
+    }
+
+    p {
+      color: hsl(233, 8%, 62%);
+      line-height: 150%;
+    }
+  }
+}

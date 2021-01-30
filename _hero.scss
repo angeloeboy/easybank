@@ -1,0 +1,44 @@
+.hero {
+  padding: 150px 0px 100px 10%;
+  box-sizing: initial;
+  position: relative;
+  height: 500px;
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  //   background-color: red;
+  .text-container {
+    position: absolute;
+    width: 400px;
+    top: 50%;
+    transform: translateY(-50%);
+    h1 {
+      font-size: 3.5rem;
+      font-weight: 300;
+      letter-spacing: -2px;
+      color: hsl(233, 26%, 24%);
+    }
+
+    p {
+      margin: 20px 0px;
+      color: hsl(233, 8%, 62%);
+      line-height: 150%;
+    }
+  }
+
+  .bg-image {
+    position: absolute;
+    left: 40%;
+    transform: translateY(-50%);
+    top: 50%;
+    z-index: -1;
+  }
+}
+
+.image {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 55%;
+  z-index: 99;
+}
