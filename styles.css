@@ -9,8 +9,10 @@ body,
   font-family: "Public Sans", sans-serif;
 }
 
-body {
+body,
+html {
   overflow-x: hidden;
+  position: relative;
 }
 
 button {
@@ -147,7 +149,7 @@ nav .nav-button {
 
 @media only screen and (max-width: 968px) {
   nav {
-    position: relative;
+    position: fixed;
   }
   nav .links {
     position: absolute;
@@ -234,7 +236,7 @@ nav .nav-button {
 }
 
 .hero .text-container p {
-  margin: 20px 0px;
+  margin: 30px 0px;
   color: #9698a6;
   line-height: 150%;
 }
@@ -250,10 +252,44 @@ nav .nav-button {
 
 .image {
   position: absolute;
-  width: 100%;
-  top: 0;
-  left: 55%;
+  top: -20px;
+  right: -10%;
   z-index: 99;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 450px) {
+  .image {
+    width: 100%;
+    right: 0;
+  }
+  .image img {
+    width: 100%;
+  }
+  .hero {
+    height: auto;
+    padding-left: 0%;
+    padding-right: 0%;
+    padding-bottom: 0px;
+    padding-top: 100vh;
+  }
+  .hero .text-container {
+    text-align: center;
+    width: 95%;
+    display: block;
+    margin: 0 auto;
+    position: initial;
+    padding: 0px 5%;
+  }
+  .hero .text-container h1 {
+    font-size: 2.7rem;
+  }
+  .hero .text-container p {
+    font-size: 1rem;
+  }
+  .hero .bg-image {
+    display: none;
+  }
 }
 
 .features-container {
@@ -268,6 +304,7 @@ nav .nav-button {
 .features-container .top-text h1 {
   font-weight: 400;
   color: #2d314d;
+  font-size: 2.5rem;
 }
 
 .features-container .top-text p {
@@ -286,11 +323,14 @@ nav .nav-button {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .features-container .features-containers .features {
   margin: 0px 20px;
   margin-top: 100px;
+  width: 200px;
 }
 
 .features-container .features-containers .features h2 {
@@ -303,5 +343,208 @@ nav .nav-button {
   color: #9698a6;
   line-height: 150%;
   letter-spacing: 0px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .features-container .top-text {
+    text-align: center;
+    width: 100%;
+  }
+  .features-container .features-containers {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 30px;
+  }
+  .features-container .features-containers .features {
+    margin: 40px 50px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .features-container .top-text {
+    text-align: center;
+    width: 100%;
+  }
+  .features-container .top-text h1 {
+    font-size: 2rem;
+  }
+  .features-container .features-containers {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .features-container .features-containers .features {
+    width: 100%;
+    text-align: center;
+  }
+  .features-container .features-containers .features p {
+    font-size: 0.9rem;
+  }
+}
+
+.articles {
+  padding: 100px 10%;
+  background-color: #ffffff;
+}
+
+.articles h1 {
+  font-weight: 400;
+  font-size: 2.5rem;
+  color: #2d314d;
+}
+
+.articles .article-container {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.articles .article-container .article {
+  background-color: #ffffff;
+  width: 275px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.articles .article-container .article:hover {
+  -webkit-box-shadow: 0px 5px 10px 5px #dadada;
+          box-shadow: 0px 5px 10px 5px #dadada;
+}
+
+.articles .article-container .article img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 100%;
+  height: 45%;
+}
+
+.articles .article-container .article .text {
+  padding: 30px;
+}
+
+.articles .article-container .article .text h3 {
+  margin: 10px 0px;
+  font-weight: 300;
+}
+
+.articles .article-container .article .text p {
+  color: #9698a6;
+}
+
+.articles .article-container .article .text .author {
+  font-size: 0.7rem;
+}
+
+@media only screen and (max-width: 1200px) {
+  .articles h1 {
+    text-align: center;
+  }
+  .articles .article-container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .articles .article-container .article {
+    margin: 20px;
+  }
+}
+
+footer {
+  background-color: #2d314d;
+  padding: 60px 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  z-index: 100000;
+}
+
+footer .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .links .logo .socmed {
+  padding-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer .links ul {
+  margin: 0px;
+}
+
+footer .links ul li {
+  text-decoration: none;
+  list-style-type: none;
+  margin: 10px 0px;
+}
+
+footer .links ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+footer .footer-button p {
+  margin-top: 20px;
+  color: #9698a6;
+  margin-top: 100px;
+}
+
+footer .footer-button button {
+  display: block;
+}
+
+@media only screen and (max-width: 900px) {
+  footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  footer .links {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    text-align: center;
+  }
+  footer .links ul li {
+    margin-top: 20px;
+  }
+  footer .footer-button {
+    margin-top: 30px;
+  }
+  footer .footer-button button {
+    display: block;
+    margin: 0 auto;
+  }
+  footer .footer-button p {
+    margin-top: 10px;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

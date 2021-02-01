@@ -49,31 +49,6 @@ nav {
     }
   }
 
-  .button {
-    // button {
-    //   background-color: green;
-    //   background: linear-gradient(
-    //     90deg,
-    //     rgba(33, 185, 13, 1) 18%,
-    //     rgba(4, 149, 142, 1) 74%
-    //   );
-    //   border: none;
-    //   border-radius: 40px;
-    //   padding: 10px 20px;
-    //   height: 50px;
-    //   width: 170px;
-    //   transition: opacity 0.2s ease;
-    //   a {
-    //     color: white;
-    //     text-decoration: none;
-    //   }
-
-    //   &:hover {
-    //     opacity: 0.8;
-    //   }
-    // }
-  }
-
   .nav-button {
     display: none;
   }
@@ -103,7 +78,7 @@ nav {
 
 @media only screen and (max-width: 968px) {
   nav {
-    position: relative;
+    position: fixed;
     .links {
       position: absolute;
       background-color: white;

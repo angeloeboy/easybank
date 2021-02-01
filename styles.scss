@@ -9,8 +9,10 @@ body,
   font-family: "Public Sans", sans-serif;
 }
 
-body {
+body,
+html {
   overflow-x: hidden;
+  position: relative;
 }
 
 button {
@@ -39,3 +41,5 @@ button {
 @import "_nav.scss";
 @import "_hero.scss";
 @import "_features.scss";
+@import "_articles.scss";
+@import "_footer.scss";

@@ -20,7 +20,7 @@
     }
 
     p {
-      margin: 20px 0px;
+      margin: 30px 0px;
       color: hsl(233, 8%, 62%);
       line-height: 150%;
     }
@@ -37,8 +37,48 @@
 
 .image {
   position: absolute;
-  width: 100%;
-  top: 0;
-  left: 55%;
+  top: -20px;
+  right: -10%;
   z-index: 99;
+  overflow: hidden;
+}
+
+@media only screen and(max-width: 450px) {
+  .image {
+    width: 100%;
+    // background-color: red;
+    right: 0;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .hero {
+    height: auto;
+    padding-left: 0%;
+    padding-right: 0%;
+    padding-bottom: 0px;
+    padding-top: 100vh;
+
+    .text-container {
+      text-align: center;
+      width: 95%;
+      display: block;
+      margin: 0 auto;
+      position: initial;
+      padding: 0px 5%;
+      h1 {
+        font-size: 2.7rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+
+    .bg-image {
+      display: none;
+    }
+  }
 }
