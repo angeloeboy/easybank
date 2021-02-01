@@ -148,9 +148,6 @@ nav .nav-button {
 }
 
 @media only screen and (max-width: 968px) {
-  nav {
-    position: fixed;
-  }
   nav .links {
     position: absolute;
     background-color: white;
@@ -216,8 +213,7 @@ nav .nav-button {
   position: relative;
   height: 500px;
   max-width: 100%;
-  overflow-x: hidden;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 .hero .text-container {
@@ -258,20 +254,42 @@ nav .nav-button {
   overflow: hidden;
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 1200px) {
+  .image img {
+    width: 60vw;
+  }
+}
+
+@media only screen and (max-width: 1040px) {
   .image {
     width: 100%;
-    right: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    top: -60px;
+    overflow: hidden;
+    display: none;
   }
   .image img {
     width: 100%;
   }
   .hero {
-    height: auto;
+    height: initial;
+    padding-top: 0px;
     padding-left: 0%;
     padding-right: 0%;
     padding-bottom: 0px;
-    padding-top: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    overflow-y: hidden;
   }
   .hero .text-container {
     text-align: center;
@@ -280,6 +298,10 @@ nav .nav-button {
     margin: 0 auto;
     position: initial;
     padding: 0px 5%;
+    padding-top: calc(10vw + 10px);
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    margin-bottom: 100px;
   }
   .hero .text-container h1 {
     font-size: 2.7rem;
@@ -288,7 +310,12 @@ nav .nav-button {
     font-size: 1rem;
   }
   .hero .bg-image {
-    display: none;
+    position: initial;
+    top: 100px;
+    z-index: -1;
+    width: 100%;
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
   }
 }
 
@@ -358,6 +385,7 @@ nav .nav-button {
   }
   .features-container .features-containers .features {
     margin: 40px 50px;
+    text-align: center;
   }
 }
 

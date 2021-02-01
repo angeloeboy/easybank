@@ -4,9 +4,8 @@
   position: relative;
   height: 500px;
   max-width: 100%;
-  overflow-x: hidden;
-  overflow-y: hidden;
-  //   background-color: red;
+  overflow: hidden;
+
   .text-container {
     position: absolute;
     width: 400px;
@@ -43,23 +42,37 @@
   overflow: hidden;
 }
 
-@media only screen and(max-width: 450px) {
+@media only screen and(max-width: 1200px) {
+  .image {
+    img {
+      width: 60vw;
+    }
+  }
+}
+
+@media only screen and(max-width: 1040px) {
   .image {
     width: 100%;
-    // background-color: red;
-    right: 0;
-
+    left: 50%;
+    transform: translateX(-50%);
+    top: -60px;
+    overflow: hidden;
+    display: none;
     img {
       width: 100%;
     }
   }
 
   .hero {
-    height: auto;
+    height: initial;
+    padding-top: 0px;
     padding-left: 0%;
     padding-right: 0%;
     padding-bottom: 0px;
-    padding-top: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+    overflow-y: hidden;
 
     .text-container {
       text-align: center;
@@ -68,6 +81,10 @@
       margin: 0 auto;
       position: initial;
       padding: 0px 5%;
+      padding-top: calc(10vw + 10px);
+      transform: translateX(0%);
+      margin-bottom: 100px;
+
       h1 {
         font-size: 2.7rem;
       }
@@ -78,7 +95,52 @@
     }
 
     .bg-image {
-      display: none;
+      position: initial;
+      top: 100px;
+      z-index: -1;
+      width: 100%;
+      // height: 100%;
+      transform: translateY(0%);
     }
   }
 }
+
+// @media only screen and(max-width: 450px) {
+//   .image {
+//     width: 100%;
+//     // background-color: red;
+//     right: 0;
+
+//     img {
+//       width: 100%;
+//     }
+//   }
+
+//   .hero {
+//     height: auto;
+//     padding-left: 0%;
+//     padding-right: 0%;
+//     padding-bottom: 0px;
+//     padding-top: 100vh;
+
+//     .text-container {
+//       text-align: center;
+//       width: 95%;
+//       display: block;
+//       margin: 0 auto;
+//       position: initial;
+//       padding: 0px 5%;
+//       h1 {
+//         font-size: 2.7rem;
+//       }
+
+//       p {
+//         font-size: 1rem;
+//       }
+//     }
+
+//     .bg-image {
+//       display: none;
+//     }
+//   }
+// }
